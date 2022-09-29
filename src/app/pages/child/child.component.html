@@ -1,0 +1,14 @@
+<div #childElement class="child-container">
+    <p>child works!</p>
+
+    <p>{{numberFromParentToChild}}: Numero que el hijo recibe del padre</p>
+
+
+    <hr>
+<p>{{numberSendToParent}}: Numero que el hijo envia al padre</p>
+   
+    <button class="btn btn-success" (click)="sendToParent()">ENVIAR AL PADRE</button>
+
+
+
+</div>

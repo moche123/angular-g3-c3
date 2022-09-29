@@ -1,0 +1,11 @@
+<h2> {{ title | uppercase }} </h2>
+
+<div class="container-characters">
+    <!-- DIRECTIVA NGFOR -----BEM:NOMENCLATURA-->
+    <section class="container-characters--item"  *ngFor="let character of observablelist$ | async">
+        {{character.name}}
+
+        <img [src]="character.image" alt="">
+        <!-- {{personaje.image}} -->
+    </section>
+</div>

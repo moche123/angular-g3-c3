@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>LLEGASTE A LA PÁGINA DE PIPES Y DIRECTIVAS</h2>
+    <hr>
+    <div [ngClass]="mode=='light' ?'bg-warning text-dark' :'bg-dark text-warning'">
+        <h3>
+            HELLO CETI
+        </h3>
+    </div>
+    <button class="btn btn-danger" (click)="changeMode()">Click to change the theme</button>
+
+    <hr>
+    <div class="container-characters">
+        <!-- DIRECTIVA NGFOR -----BEM:NOMENCLATURA-->
+        <section class="container-characters--item"  *ngFor="let character of arrayPeople | sortAge">
+            {{character.name}} - {{character.age}}
+        </section>
+    </div>
+</div>
+

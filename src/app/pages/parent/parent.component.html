@@ -1,0 +1,17 @@
+<div class="parent-container container mt-3">
+    <h2>LLEGASTE A LA PÁGINA DE INPUT Y OUTPUT</h2>
+    
+    {{numberParentChild}}: Numero que el padre le envie al hijo
+
+    <hr>
+    {{numberReceivedFromChild}}: Numero que el padre recibe del hijo
+    
+
+    <button class="btn btn-primary" (click)="sendInfoToChild()">ENVIAR AL HIJO</button>
+
+    <app-child [numberFromParentToChild]="numberParentChild" 
+                      (numberFromChildToParent)="receiveFromChild($event)" ></app-child>
+
+</div>
+
+
